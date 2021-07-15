@@ -1,0 +1,42 @@
+html{
+    font-family: 'sans-serif';
+}
+body{
+    min-width: 320px;
+    background-color: rgb(0,255,255);
+}
+.botoes{
+    display: flex;
+    flex-flow: column;
+}
+#button,#button2{
+    width: 150px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+#textinput{
+    background-color: black;
+    color: white;
+}
+div{
+    width:100%;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-bottom: 20px;
+   
+}
+@media screen and (min-width:800px) {
+    body{
+        background-color: Pink;
+
+    }
+    #button,#button2{
+        background-color: white;
+        color: black;
+    }
+    .botoes{
+        flex-flow: row;
+    }
+}
