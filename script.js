@@ -5,7 +5,7 @@ function captaTexto (){
     return texto;
 }
 button.addEventListener('click',function a(){
-    let result_letra=document.getElementById("teste")
+    let result_letra=document.getElementById("teste");
     main(captaTexto(),1,result_letra)
 })
 button2.addEventListener('click',function b(){
@@ -23,14 +23,12 @@ function main(texto,seletor,result){
     let array=[]
     let x=[];
     let contador=0;
-    let frase;
- 
     if(seletor===1){
         escolha=letras
-        frase="A quantidade de letras  foi :"
+     
     }
     if(seletor===2){
-        frase="A quantidade de palavras  foi :"
+  
         escolha=palavras;
     }
     separaString(array,escolha,contador2,x)
@@ -40,7 +38,7 @@ function main(texto,seletor,result){
     contaLetras(contador,x,escolha)
     
     x=x.join("// ")
-    imprime(x,result,frase)
+    imprime(x,result)
 }
 function separaString (array,texto,contador2,x){
     for(let i=0;i<texto.length;i++){
@@ -82,11 +80,6 @@ function contaLetras (contador,x,texto){
        x[r]= x[r]+ ":"+contador
     }
 }
-function imprime (x,result,frase){
-    let paragrafo=document.createElement("p")
-    let o=document.createTextNode(frase)
-    let i=document.createTextNode(x)
-    result.appendChild(paragrafo)
-    paragrafo.appendChild(o)
-   result.appendChild(i)
+function imprime (x,result){
+    result.innerText=x;
 }
